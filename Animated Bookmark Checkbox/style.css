@@ -1,0 +1,74 @@
+body {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   height: 100vh;
+}
+
+.bookmark-checkbox {
+   display: inline-block;
+}
+
+.bookmark-checkbox__input {
+   display: none;
+}
+
+.bookmark-checkbox__label {
+   cursor: pointer;
+}
+
+.bookmark-checkbox__icon {
+   width: 2em;
+   height: 2em;
+   fill: none;
+   stroke-width: 2;
+   stroke-linecap: round;
+   stroke-linejoin: round;
+   transition: stroke 0.3s, fill 0.3s;
+}
+
+.bookmark-checkbox__icon-back {
+   stroke: #01204e;
+   transition: transform 0.3s;
+}
+
+.bookmark-checkbox__icon-check {
+   stroke: #fff;
+   stroke-dasharray: 16;
+   stroke-dashoffset: 16;
+   transition: stroke-dashoffset 0.3s, transform 0.3s;
+   transform: translateX(2px);
+}
+
+.bookmark-checkbox__input:checked
+   + .bookmark-checkbox__label
+   .bookmark-checkbox__icon {
+   fill: #028391;
+}
+
+.bookmark-checkbox__input:checked
+   + .bookmark-checkbox__label
+   .bookmark-checkbox__icon-back {
+   stroke: #028391;
+   transform: scale(1.1);
+   animation: bookmark-pop 0.4s ease;
+}
+
+.bookmark-checkbox__input:checked
+   + .bookmark-checkbox__label
+   .bookmark-checkbox__icon-check {
+   stroke-dashoffset: 0;
+   transition-delay: 0.2s;
+}
+
+@keyframes bookmark-pop {
+   0% {
+      transform: scale(1);
+   }
+   50% {
+      transform: scale(1.2);
+   }
+   100% {
+      transform: scale(1.1);
+   }
+}
