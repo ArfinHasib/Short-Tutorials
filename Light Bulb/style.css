@@ -1,0 +1,27 @@
+body {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   height: 100vh;
+   background-color: #020322;
+}
+
+#checkbox-input {
+   display: none;
+}
+
+.switch {
+   width: fit-content;
+   padding: 10px;
+   background-color: rgb(46, 46, 46);
+   border-radius: 50px;
+   z-index: 1;
+   cursor: pointer;
+   display: flex;
+   transition: all 0.7s;
+}
+
+#checkbox-input:checked + .switch {
+   background-color: rgb(161, 91, 0);
+   box-shadow: 0px 0px 100px rgb(255, 196, 0);
+}
