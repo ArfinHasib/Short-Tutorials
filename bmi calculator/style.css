@@ -1,0 +1,65 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&family=Potta+One&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #020323;
+}
+
+.container {
+    width: 22rem;
+    margin-top: 8rem;
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 30px;
+}
+
+.inputs {
+    display: flex;
+    flex-direction: column;
+    margin: 15px 0;
+}
+
+.inputs input {
+    outline: none;
+    height: 40px;
+    padding: 5px;
+}
+
+.inputs label {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+#results {
+    font-size: 24px;
+    text-align: center;
+    color: #2563eb;
+    font-weight: 700;
+}
+
+.calcBtn {
+    width: 100%;
+    padding: 16px 0;
+    margin-top: 10px;
+    border-radius: 5px;
+    border-style: none;
+    background-color: #2563eb;
+    color: #fff;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+#message {
+    text-align: center;
+    font-size: 18px;
+    font-weight: 500;
+}
